@@ -1,0 +1,122 @@
+{
+  "db_id": "data",
+  "schema": "public",
+  "tables": {
+    "public.nodedata": {
+      "fields": {
+        "nodeid": {
+          "type": "TEXT",
+          "primary_key": true,
+          "nullable": false,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "i-0000d4f7372fb61ae",
+            "i-0003ffb663799aca6",
+            "i-0004439ed925e9b69",
+            "i-0005028f2e6edf368",
+            "i-00074f29904fc0547"
+          ]
+        },
+        "nodename": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "ip-10-93-224-63.us-west-2.compute.internal",
+            "ip-10-91-59-99.us-west-2.compute.internal",
+            "ip-10-90-219-71.us-west-2.compute.internal",
+            "ip-10-91-102-175.us-west-2.compute.internal",
+            "ip-10-79-240-157.us-west-2.compute.internal"
+          ]
+        },
+        "clustername": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "sensei-eks04-prod-cluster",
+            "sensei-eks01-prod-cluster",
+            "colligo-laser01-prod-uw2",
+            "colligo-laser-control-prod-uw2",
+            "sensei-eks02-prod-cluster"
+          ]
+        },
+        "instancetype": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "p4de.24xlarge",
+            "r5dn.8xlarge",
+            "c5d.24xlarge",
+            "r6i.24xlarge",
+            "p4d.24xlarge"
+          ]
+        },
+        "tags": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "{'Adobe.Owner': 'Sensei Ops'; 'Name': 'colligo-laser01-prod-a100-emptyDir-gpu-efa-lt-01'; 'eks:cluster-name': 'colligo-laser01-prod-uw2'; 'aws:ec2:fleet-id': 'fleet-1a34a204-7925-6696-a432-0d8866022d9e'; 'k8s.io/cluster-autoscaler/colligo-laser01-prod-uw2': 'owned'; 'aws:autoscaling:groupName': 'eks-colligo-laser01-prod-a100-emptyDir-gpu-efa-01-dccaf998-579a-c7ae-c2d3-2b04e12b4720'; 'Adobe.CostCenter': '102841'; 'Adobe.ArchPath': 'Sensei.Training.Cluster.Infra'; 'aws:ec2launchtemplate:version': '1'; 'kubernetes.io/cluster/colligo-laser01-prod-uw2': 'owned'; 'Adobe.DataClassification': 'Restricted'; 'aws:ec2launchtemplate:id': 'lt-0e0846ea2f7481431'; 'k8s.io/cluster-autoscaler/enabled': 'true'; 'eks:nodegroup-name': 'colligo-laser01-prod-a100-emptyDir-gpu-efa-01'; 'Adobe.Project': 'Sensei-EKS'; 'aws:eks:cluster-name': 'colligo-laser01-prod-uw2'; 'Adobe.Environment': 'Prod'; 'CapacityReservationId': 'cr-0f1e1d17ec2f6423d'}",
+            "{'aws:ec2launchtemplate:id': 'lt-062256079ed7a87de'; 'aws:ec2launchtemplate:version': '1'; 'aws:ec2:fleet-id': 'fleet-b03e88ae-710d-ec36-8618-a72828d57531'; 'Adobe.ArchPath': 'Sensei.Training.Cluster.Infra'; 'k8s.io/cluster-autoscaler/colligo-laser01-prod-uw2': 'owned'; 'k8s.io/cluster-autoscaler/enabled': 'true'; 'aws:eks:cluster-name': 'colligo-laser01-prod-uw2'; 'eks:nodegroup-name': 'colligo-laser01-prod-h100-emptyDir-gpu-efa-h100-06'; 'Adobe.Environment': 'Prod'; 'Adobe.CostCenter': '102841'; 'Adobe.Owner': 'Sensei Ops'; 'Adobe.Project': 'Sensei-EKS'; 'kubernetes.io/cluster/colligo-laser01-prod-uw2': 'owned'; 'Name': 'colligo-laser01-prod-h100-emptyDir-gpu-efa-h100-lt-06'; 'aws:autoscaling:groupName': 'eks-colligo-laser01-prod-h100-emptyDir-gpu-efa-h100-06-c4caf913-25ad-f69f-dcbd-9196a4a2f34c'; 'Adobe.DataClassification': 'Restricted'; 'eks:cluster-name': 'colligo-laser01-prod-uw2'; 'CapacityReservationId': 'cr-08f66be6360b5763d'}",
+            "{'Adobe.Owner': 'Sensei Ops'; 'eks:cluster-name': 'sensei-eks04-prod-cluster'; 'kubernetes.io/cluster/sensei-eks04-prod-cluster': 'owned'; 'aws:autoscaling:groupName': 'eks-sensei-eks04-prod-gpu-efa-ng-01-24ca9b67-7e76-79b3-2c1c-936fab7f7d37'; 'aws:ec2launchtemplate:id': 'lt-01e9a42a66d9732de'; 'Adobe.Project': 'Sensei-EKS'; 'eks:nodegroup-name': 'sensei-eks04-prod-gpu-efa-ng-01'; 'k8s.io/cluster-autoscaler/sensei-eks04-prod-cluster': 'owned'; 'Adobe.Environment': 'Prod'; 'Name': 'sensei-eks04-prod-gpu-efa-ng-01'; 'Adobe.CostCenter': '102841'; 'aws:ec2:fleet-id': 'fleet-b09e0a2e-79af-44b4-06b8-ad80ad231628'; 'k8s.io/cluster-autoscaler/enabled': 'true'; 'Adobe.ArchPath': 'Sensei.Training.Cluster.Infra'; 'Adobe.DataClassification': 'Restricted'; 'aws:eks:cluster-name': 'sensei-eks04-prod-cluster'; 'aws:ec2launchtemplate:version': '1'; 'CapacityReservationId': 'cr-0567533284647125e'}",
+            "{'Adobe.CostCenter': '102841'; 'aws:ec2launchtemplate:version': '1'; 'kubernetes.io/cluster/colligo-laser01-prod-uw2': 'owned'; 'Adobe.ArchPath': 'Sensei.Training.Cluster.Infra'; 'aws:ec2:fleet-id': 'fleet-243cbe15-c6ad-e6a7-2e12-81aab13cfe3b'; 'eks:nodegroup-name': 'colligo-laser01-prod-h100-emptyDir-gpu-efa-h100-02'; 'k8s.io/cluster-autoscaler/colligo-laser01-prod-uw2': 'owned'; 'k8s.io/cluster-autoscaler/enabled': 'true'; 'aws:autoscaling:groupName': 'eks-colligo-laser01-prod-h100-emptyDir-gpu-efa-h100-02-96caf713-510b-4917-8a77-4885cfb1ccca'; 'Adobe.Owner': 'Sensei Ops'; 'aws:ec2launchtemplate:id': 'lt-0ec4929233ebdbdf9'; 'eks:cluster-name': 'colligo-laser01-prod-uw2'; 'Adobe.DataClassification': 'Restricted'; 'aws:eks:cluster-name': 'colligo-laser01-prod-uw2'; 'Adobe.Project': 'Sensei-EKS'; 'Name': 'colligo-laser01-prod-h100-emptyDir-gpu-efa-h100-lt-02'; 'Adobe.Environment': 'Prod'; 'CapacityReservationId': 'cr-0fe7b8e0c190816d2'}",
+            "{'Adobe.ArchPath': 'Sensei.Training.Cluster.Infra'; 'aws:ec2:fleet-id': 'fleet-043e34b5-e627-e60d-ae38-a12a7dd3a373'; 'eks:nodegroup-name': 'colligo-laser01-prod-a100-emptyDir-gpu-efa-01'; 'Adobe.DataClassification': 'Restricted'; 'k8s.io/cluster-autoscaler/enabled': 'true'; 'aws:ec2launchtemplate:version': '1'; 'kubernetes.io/cluster/colligo-laser01-prod-uw2': 'owned'; 'Adobe.Project': 'Sensei-EKS'; 'aws:autoscaling:groupName': 'eks-colligo-laser01-prod-a100-emptyDir-gpu-efa-01-dccaf998-579a-c7ae-c2d3-2b04e12b4720'; 'k8s.io/cluster-autoscaler/colligo-laser01-prod-uw2': 'owned'; 'aws:ec2launchtemplate:id': 'lt-0e0846ea2f7481431'; 'aws:eks:cluster-name': 'colligo-laser01-prod-uw2'; 'Adobe.Owner': 'Sensei Ops'; 'Adobe.Environment': 'Prod'; 'eks:cluster-name': 'colligo-laser01-prod-uw2'; 'Name': 'colligo-laser01-prod-a100-emptyDir-gpu-efa-lt-01'; 'Adobe.CostCenter': '102841'; 'CapacityReservationId': 'cr-0f1e1d17ec2f6423d'}"
+          ]
+        },
+        "created": {
+          "type": "TIMESTAMP",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2025-05-11 01:37:51"
+          ]
+        },
+        "snapshottime": {
+          "type": "TIMESTAMP",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "2025-04-21 19:46:53.516841"
+          ]
+        },
+        "platform": {
+          "type": "TEXT",
+          "primary_key": false,
+          "nullable": true,
+          "default": null,
+          "autoincrement": false,
+          "comment": "",
+          "examples": [
+            "pluto",
+            "runai"
+          ]
+        }
+      },
+      "examples": [],
+      "comment": ""
+    }
+  },
+  "foreign_keys": []
+}

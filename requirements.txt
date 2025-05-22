@@ -1,0 +1,6 @@
+llama-index
+numpy
+sqlalchemy
+torch
+transformers
+accelerate
